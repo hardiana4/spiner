@@ -50,14 +50,6 @@ class KinerjaController extends Controller
         ]);
     }
 
-    public function editpassword()
-    {
-        $user = Auth::User();
-        return view('data_kinerja.edit_password')->with([
-            "user" => $user,
-        ]);
-    }
-
     public function laporan()
     {
         $user = Auth::User();
