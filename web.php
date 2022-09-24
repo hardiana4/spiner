@@ -46,6 +46,8 @@ Route::group(["middleware" => ["auth"]], function () {
 
         Route::get('edit-pegawai/{id}', [PegawaiController::class,'edit']);
         Route::post('/pegawai/update/{id}', [PegawaiController::class,'update']);
+        Route::get("edit-password-pegawai/{id}", [PegawaiController::class, 'editpassword']);
+        Route::post('/update/password/pegawai/{id}', [PegawaiController::class, 'updatepassword']);
         Route::get('hapus-pegawai/{id}', [PegawaiController::class,'destroy']);
 
         Route::get("bidang",  [BidangController::class,'index']);
